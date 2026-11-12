@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>院内CAD/CAMシステムのご紹介｜うめがえ歯科医院（浜松市中央区）</title>
+  <meta name="description" content="静岡県浜松市中央区の「うめがえ歯科医院」における院内CAD/CAMシステム（口腔内スキャナー・ミリングマシン）および保険診療の白い被せ物（CAD/CAM冠）のご案内ページです。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* ポスターの色味を踏襲した温かみのあるマルチカラーパレット */
+      --bg-cream: #faf6f0;
+      --bg-warm-beige: #f3ece1;
+      --bg-white: #ffffff;
+
+      /* メイン：ポスターの落ち着いたペトロールブルー（青緑系ブルー） */
+      --petrol-blue: #2e6b87;
+      --petrol-blue-dark: #204e64;
+      --petrol-blue-pale: #e6f1f6;
+      --petrol-blue-border: #bfd8e4;
+
+      /* アクセント1：温かみのあるコーラル・テラコッタ */
+      --coral: #dc7256;
+      --coral-dark: #c25a3e;
+      --coral-pale: #fdf0ec;
+      --coral-border: #f2cbc0;
+
+      /* アクセント2：清潔感のあるミントグリーン */
+      --mint: #388e7a;
+      --mint-pale: #e7f5f1;
+      --mint-border: #bce0d7;
+
+      /* アクセント3：やさしいアンバーゴールド */
+      --amber: #cf8d2e;
+      --amber-pale: #fdf5e6;
+      --amber-border: #edd6ab;
+
+      /* テキストカラー（高齢の方にもくっきり読みやすい濃色） */
+      --text-main: #2b353a;
+      --text-sub: #526068;
+
+      --shadow-card: 0 10px 28px rgba(32, 78, 100, 0.08);
+      --radius-xl: 20px;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 100%;
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic Medium", "Meiryo", sans-serif;
+      font-size: 1.0625rem; /* 17px */
+      line-height: 1.9;
+      letter-spacing: 0.03em;
+      color: var(--text-main);
+      background-color: var(--bg-cream);
+      overflow-wrap: anywhere;
+    }
+
+    img, svg {
+      max-width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+
+    a {
+      color: var(--petrol-blue);
+      transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .ib {
+      display: inline-block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ===== 上部カラーアクセントバー ===== */
+    .top-color-bar {
+      height: 6px;
+      background: linear-gradient(90deg, var(--petrol-blue) 0%, var(--mint) 38%, var(--amber) 70%, var(--coral) 100%);
+    }
+
+    /* ===== ヘッダー ===== */
+    .site-header {
+      background-color: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid #e6dfd3;
+      padding: 14px 0;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px 16px;
+    }
+
+    .clinic-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--petrol-blue-dark);
+    }
+
+    .clinic-brand-icon {
+      width: 38px;
+      height: 38px;
+      flex-shrink: 0;
+    }
+
+    .clinic-brand-name {
+      font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--petrol-blue-dark);
+    }
+
+    .header-tel {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 16px;
+      background-color: var(--coral-pale);
+      border: 1.5px solid var(--coral-border);
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--coral-dark);
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+
+    .header-tel:hover {
+      background-color: #fbe2db;
+    }
+
+    /* ===== 1. ファーストビュー（ポスターの色味・雰囲気を踏襲） ===== */
+    .hero {
+      background: linear-gradient(160deg, #faf6f0 0%, #f3ebe0 55%, #e7f1f5 100%);
+      padding: 32px 0 48px;
+      border-bottom: 1px solid #e5ddd0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(220, 114, 86, 0.12) 0%, rgba(220, 114, 86, 0) 70%);
+      pointer-events: none;
+    }
+
+    .hero-card {
+      background-color: var(--bg-white);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: 0 14px 36px rgba(32, 78, 100, 0.10);
+      border: 1px solid #e8e0d4;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .hero-photo-wrap {
+      position: relative;
+      background-color: var(--bg-warm-beige);
+      min-height: 250px;
+    }
+
+    .hero-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+    }
+
+    .hero-photo-tag {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      background-color: rgba(255, 255, 255, 0.93);
+      color: var(--petrol-blue-dark);
+      padding: 5px 13px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+      border-left: 4px solid var(--coral);
+    }
+
+    .hero-content {
+      padding: 24px 20px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-sub-pill {
+      display: inline-block;
+      align-self: flex-start;
+      background-color: var(--petrol-blue-pale);
+      color: var(--petrol-blue-dark);
+      border: 1px solid var(--petrol-blue-border);
+      padding: 5px 13px;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .hero-title {
+      font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+      font-size: 1.4rem;
+      line-height: 1.52;
+      font-weight: 700;
+      color: var(--petrol-blue-dark);
+      margin: 0 0 18px;
+    }
+
+    /* ポスター下部の半透明ペトロールブルー帯を踏襲した案内パネル */
+    .hero-blue-band {
+      background: linear-gradient(135deg, rgba(46, 107, 135, 0.94) 0%, rgba(56, 130, 142, 0.94) 100%);
+      color: var(--bg-white);
+      padding: 18px 20px;
+      border-radius: var(--radius-md);
+      margin: 0;
+      font-size: 1.03rem;
+      line-height: 1.85;
+      box-shadow: 0 4px 14px rgba(46, 107, 135, 0.18);
+    }
+
+    /* ===== 共通セクション ===== */
+    .section {
+      padding: 54px 0;
+    }
+
+    .section-white {
+      background-color: var(--bg-white);
+      border-top: 1px solid #ebe3d6;
+      border-bottom: 1px solid #ebe3d6;
+    }
+
+    .section-cream {
+      background-color: var(--bg-cream);
+    }
+
+    .section-tinted {
+      background: linear-gradient(180deg, #eef6f8 0%, #faf6f0 100%);
+      border-top: 1px solid #d8e7ed;
+      border-bottom: 1px solid #e8dfd2;
+    }
+
+    .section-header {
+      margin-bottom: 30px;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .label-blue {
+      background-color: var(--petrol-blue-pale);
+      color: var(--petrol-blue-dark);
+      border: 1px solid var(--petrol-blue-border);
+    }
+
+    .label-mint {
+      background-color: var(--mint-pale);
+      color: #246858;
+      border: 1px solid var(--mint-border);
+    }
+
+    .label-amber {
+      background-color: var(--amber-pale);
+      color: #8c5b12;
+      border: 1px solid var(--amber-border);
+    }
+
+    .label-coral {
+      background-color: var(--coral-pale);
+      color: var(--coral-dark);
+      border: 1px solid var(--coral-border);
+    }
+
+    .section-title {
+      font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+      font-size: 1.48rem;
+      line-height: 1.45;
+      font-weight: 700;
+      color: var(--petrol-blue-dark);
+      margin: 0;
+      padding-bottom: 12px;
+      border-bottom: 3px solid var(--petrol-blue-border);
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 88px;
+      height: 3px;
+      background-color: var(--coral);
+    }
+
+    .section-intro {
+      margin: 16px 0 0;
+      font-size: 1.0625rem;
+      color: var(--text-main);
+    }
+
+    /* ===== 2. 院内でできるようになったこと（3ステップ図解：カラフル3色展開） ===== */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .step-card {
+      background-color: var(--bg-white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      border: 2px solid var(--petrol-blue-border);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .step-card.step-1 {
+      border-color: var(--petrol-blue-border);
+    }
+    .step-card.step-2 {
+      border-color: var(--mint-border);
+    }
+    .step-card.step-3 {
+      border-color: var(--coral-border);
+    }
+
+    .step-top-band {
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .step-1 .step-top-band {
+      background-color: var(--petrol-blue-pale);
+    }
+    .step-2 .step-top-band {
+      background-color: var(--mint-pale);
+    }
+    .step-3 .step-top-band {
+      background-color: var(--coral-pale);
+    }
+
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 11px;
+      border-radius: 999px;
+      color: var(--bg-white);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+    }
+
+    .step-1 .step-num { background-color: var(--petrol-blue); }
+    .step-2 .step-num { background-color: var(--mint); }
+    .step-3 .step-num { background-color: var(--coral); }
+
+    .step-title {
+      margin: 0;
+      font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+      font-size: 1.28rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* あとから実機写真にもそのまま差し替えられる画像枠 */
+    .step-image-frame {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background-color: var(--bg-cream);
+      overflow: hidden;
+      position: relative;
+      border-bottom: 1px solid #eee7dc;
+    }
+
+    .step-image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .step-image-caption {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background-color: rgba(255, 255, 255, 0.88);
+      color: var(--text-sub);
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 3px 9px;
+      border-radius: 999px;
+    }
+
+    .step-body {
+      padding: 18px 20px 22px;
+      flex: 1;
+    }
+
+    .step-desc {
+      margin: 0;
+      font-size: 1.0625rem;
+      line-height: 1.85;
+      color: var(--text-main);
+    }
+
+    .step-arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: -8px 0;
+      color: var(--petrol-blue);
+    }
+
+    /* 院長紹介カード */
+    .doctor-banner {
+      margin-top: 30px;
+      background: linear-gradient(135deg, #fffdf9 0%, var(--amber-pale) 100%);
+      border: 1.5px solid var(--amber-border);
+      border-radius: var(--radius-lg);
+      padding: 20px 22px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .doctor-badge-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background-color: var(--bg-white);
+      border: 2px solid var(--amber);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .doctor-banner-text {
+      margin: 0;
+      font-size: 1.0625rem;
+      line-height: 1.75;
+    }
+
+    /* ===== 3. 保険診療の白い被せ物（CAD/CAM冠） ===== */
+    .cadcam-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .cadcam-photo-card {
+      background-color: var(--bg-white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 2px solid var(--mint-border);
+      box-shadow: var(--shadow-card);
+    }
+
+    .cadcam-photo-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+    }
+
+    .cadcam-photo-caption {
+      margin: 0;
+      padding: 12px 16px;
+      background-color: var(--mint-pale);
+      color: #215e4f;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .feature-item {
+      background-color: var(--bg-white);
+      border-radius: var(--radius-md);
+      padding: 20px 20px;
+      box-shadow: var(--shadow-card);
+      border: 1px solid #e6dfd5;
+      border-left-width: 6px;
+    }
+
+    .feature-item:nth-child(1) { border-left-color: var(--petrol-blue); }
+    .feature-item:nth-child(2) { border-left-color: var(--mint); }
+    .feature-item:nth-child(3) { border-left-color: var(--coral); }
+
+    .feature-item-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: var(--petrol-blue-dark);
+      margin: 0 0 8px;
+    }
+
+    .feature-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .feature-item:nth-child(1) .feature-dot { background-color: var(--petrol-blue); }
+    .feature-item:nth-child(2) .feature-dot { background-color: var(--mint); }
+    .feature-item:nth-child(3) .feature-dot { background-color: var(--coral); }
+
+    .feature-item-body {
+      margin: 0;
+      font-size: 1.0625rem;
+      color: var(--text-main);
+    }
+
+    /* ===== 4. セラミック治療（自費診療）について ===== */
+    .status-panel {
+      background: linear-gradient(135deg, var(--petrol-blue-pale) 0%, #f5f9fb 100%);
+      border: 2px solid var(--petrol-blue-border);
+      border-radius: var(--radius-lg);
+      padding: 24px 22px;
+      margin-bottom: 30px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .status-badge {
+      display: inline-block;
+      background-color: var(--petrol-blue);
+      color: var(--bg-white);
+      font-size: 0.92rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    .status-panel p {
+      margin: 0 0 12px;
+      font-size: 1.0625rem;
+    }
+
+    .status-panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .material-heading {
+      font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: var(--petrol-blue-dark);
+      margin: 0 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .material-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .material-card {
+      background-color: var(--bg-white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      border: 1.5px solid #e4ddd2;
+    }
+
+    .material-card-head {
+      padding: 15px 20px;
+      font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+      font-size: 1.16rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .material-ceramic .material-card-head {
+      background-color: var(--petrol-blue);
+      color: var(--bg-white);
+    }
+
+    .material-cadcam .material-card-head {
+      background-color: var(--mint);
+      color: var(--bg-white);
+    }
+
+    .material-card-sub {
+      display: block;
+      font-family: "Noto Sans JP", sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      opacity: 0.95;
+      margin-top: 3px;
+    }
+
+    .material-card-body {
+      padding: 20px;
+      margin: 0;
+      font-size: 1.0625rem;
+    }
+
+    /* ===== 5. お問い合わせ・医院のご案内 ===== */
+    .contact-card {
+      background-color: var(--bg-white);
+      border: 2px solid var(--coral-border);
+      border-radius: var(--radius-xl);
+      padding: 30px 20px;
+      box-shadow: var(--shadow-card);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--coral) 0%, var(--amber) 50%, var(--petrol-blue) 100%);
+    }
+
+    .contact-lead {
+      margin: 4px 0 22px;
+      font-size: 1.0625rem;
+    }
+
+    .btn-form {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 430px;
+      min-height: 64px;
+      padding: 16px 26px;
+      background: linear-gradient(135deg, var(--coral) 0%, var(--coral-dark) 100%);
+      color: var(--bg-white);
+      font-size: 1.22rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 999px;
+      box-shadow: 0 6px 18px rgba(220, 114, 86, 0.32);
+    }
+
+    .btn-form:hover {
+      opacity: 0.93;
+      transform: translateY(-1px);
+    }
+
+    .btn-form-note {
+      display: block;
+      margin-top: 9px;
+      font-size: 0.92rem;
+      color: var(--text-sub);
+    }
+
+    .tel-guide-box {
+      margin-top: 28px;
+      padding: 24px 18px 6px;
+      border-top: 1.5px dashed #e5dcd0;
+    }
+
+    .tel-guide-message {
+      margin: 0 0 14px;
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--petrol-blue-dark);
+    }
+
+    .btn-tel {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 430px;
+      min-height: 64px;
+      padding: 14px 24px;
+      background-color: var(--petrol-blue-pale);
+      border: 2px solid var(--petrol-blue);
+      color: var(--petrol-blue-dark);
+      font-size: 1.48rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 999px;
+      letter-spacing: 0.04em;
+    }
+
+    .btn-tel:hover {
+      background-color: #d7eaf2;
+    }
+
+    .tel-hours-note {
+      margin: 12px 0 0;
+      font-size: 1.02rem;
+      color: var(--text-sub);
+    }
+
+    /* 医院情報テーブル・地図 */
+    .clinic-info-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: var(--bg-white);
+      border: 1.5px solid #e2dad0;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+
+    .info-table th,
+    .info-table td {
+      padding: 16px 18px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #efe8dd;
+      font-size: 1.0625rem;
+    }
+
+    .info-table tr:last-child th,
+    .info-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .info-table th {
+      background-color: var(--petrol-blue-pale);
+      color: var(--petrol-blue-dark);
+      font-weight: 700;
+      width: 27%;
+      white-space: nowrap;
+    }
+
+    .info-tel-link {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--petrol-blue-dark);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .map-wrapper {
+      width: 100%;
+      border: 2px solid var(--petrol-blue-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background-color: var(--bg-white);
+      box-shadow: var(--shadow-card);
+    }
+
+    .map-wrapper iframe {
+      display: block;
+      width: 100%;
+      height: 320px;
+      border: 0;
+    }
+
+    /* ===== 6. フッター ===== */
+    .site-footer {
+      background: linear-gradient(135deg, var(--petrol-blue-dark) 0%, #193e50 100%);
+      color: var(--bg-white);
+      padding: 38px 0 42px;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .footer-clinic-name {
+      font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-address {
+      margin: 0;
+      font-size: 1.02rem;
+      color: #e2eff5;
+    }
+
+    .footer-tel {
+      margin: 4px 0 0;
+      font-size: 1.18rem;
+      font-weight: 700;
+    }
+
+    .footer-tel a {
+      color: #ffd8cc;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .footer-copy {
+      margin: 16px 0 0;
+      font-size: 0.88rem;
+      color: #b8d0dc;
+    }
+
+    /* ===== タブレット・パソコン表示（768px以上） ===== */
+    @media (min-width: 768px) {
+      body {
+        font-size: 1.125rem; /* 18px */
+      }
+
+      .site-header {
+        padding: 16px 0;
+      }
+
+      .clinic-brand-name {
+        font-size: 1.5rem;
+      }
+
+      .header-tel {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+      }
+
+      .hero {
+        padding: 44px 0 58px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 0.95fr 1.05fr;
+        min-height: 410px;
+      }
+
+      .hero-photo-wrap img {
+        max-height: none;
+        height: 100%;
+      }
+
+      .hero-content {
+        padding: 36px 38px;
+      }
+
+      .hero-title {
+        font-size: 1.88rem;
+        line-height: 1.5;
+      }
+
+      .section {
+        padding: 68px 0;
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+      }
+
+      .steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+
+      .step-arrow {
+        display: none;
+      }
+
+      .step-desc {
+        font-size: 1rem;
+      }
+
+      .cadcam-layout {
+        grid-template-columns: 0.88fr 1.12fr;
+        gap: 30px;
+      }
+
+      .material-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+
+      .contact-card {
+        padding: 42px 38px;
+      }
+
+      .clinic-info-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+      }
+
+      .map-wrapper iframe {
+        height: 350px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .info-table th,
+      .info-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .info-table th {
+        padding-bottom: 6px;
+        border-bottom: none;
+      }
+
+      .info-table td {
+        padding-top: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-color-bar" aria-hidden="true"></div>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="clinic-brand">
+        <svg class="clinic-brand-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="24" cy="24" r="22" fill="#E6F1F6" stroke="#2E6B87" stroke-width="2.2"/>
+          <circle cx="36" cy="12" r="5" fill="#DC7256"/>
+          <path d="M17.5 15C14.5 15 12.5 17.6 12.5 21.2C12.5 25.8 14.8 29.4 16.2 34.2C16.8 36.1 17.8 37 19 37C20.3 37 21 35.4 21.8 32.5C22.3 30.6 23.1 29.8 24 29.8C24.9 29.8 25.7 30.6 26.2 32.5C27 35.4 27.7 37 29 37C30.2 37 31.2 36.1 31.8 34.2C33.2 29.4 35.5 25.8 35.5 21.2C35.5 17.6 33.5 15 30.5 15C28.2 15 26.3 16.3 24 16.3C21.7 16.3 19.8 15 17.5 15Z" fill="#FFFFFF" stroke="#2E6B87" stroke-width="2.2" stroke-linejoin="round"/>
+        </svg>
+        <span class="clinic-brand-name">うめがえ歯科医院</span>
+      </div>
+      <a class="header-tel" href="tel:0534756480" aria-label="電話をかける 053-475-6480">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z" stroke="#C25A3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>053-475-6480</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. ファーストビュー -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-card">
+          <div class="hero-grid">
+            <div class="hero-photo-wrap">
+              <img src="images/hero_smile.jpg" alt="明るい室内で微笑む女性のイメージ">
+              <span class="hero-photo-tag">浜松市中央区・うめがえ歯科医院</span>
+            </div>
+
+            <div class="hero-content">
+              <span class="hero-sub-pill">口腔内スキャナーとミリングマシンによる院内CAD/CAMシステム</span>
+              <h1 id="hero-heading" class="hero-title">
+                <span class="ib">保険の白い被せ物</span><span class="ib">（CAD/CAM冠）を、</span><span class="ib">院内で設計・製作しています</span>
+              </h1>
+              <p class="hero-blue-band">
+                当院では、お口の中を撮影する「口腔内スキャナー」と、被せ物を削り出す「ミリングマシン」をそろえ、保険診療の白い被せ物（CAD/CAM冠）を院内で設計・製作しています。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 院内でできるようになったこと（3ステップの図解） -->
+    <section class="section section-white" aria-labelledby="steps-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label label-blue">院内の設備と流れ</span>
+          <h2 id="steps-heading" class="section-title">院内でできるようになったこと（3つのステップ）</h2>
+          <p class="section-intro">
+            お口の中の撮影から、被せ物の設計・削り出しまでを院内のシステムで行います。
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <!-- ステップ1 -->
+          <article class="step-card step-1">
+            <div class="step-top-band">
+              <span class="step-num" aria-hidden="true">STEP 1</span>
+              <h3 class="step-title">① スキャン</h3>
+            </div>
+            <div class="step-image-frame">
+              <!-- 【画像差し替え用スペース①】医院で撮影した機械写真に差し替える場合は src="images/step1_scan.jpg" を変更してください -->
+              <img src="images/step1_scan.jpg" alt="口腔内スキャナーでお口の中を撮影するイメージ">
+              <span class="step-image-caption">※イメージ（実機写真へ差替可）</span>
+            </div>
+            <div class="step-body">
+              <p class="step-desc">
+                専用のカメラ（口腔内スキャナー「プライムスキャン」）で、上の歯・下の歯・かみ合わせを撮影してデータにします。
+              </p>
+            </div>
+          </article>
+
+          <div class="step-arrow" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+              <path d="M12 5v14M12 19l-6-6M12 19l6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <!-- ステップ2 -->
+          <article class="step-card step-2">
+            <div class="step-top-band">
+              <span class="step-num" aria-hidden="true">STEP 2</span>
+              <h3 class="step-title">② 設計</h3>
+            </div>
+            <div class="step-image-frame">
+              <!-- 【画像差し替え用スペース②】医院で撮影した設計画面写真に差し替える場合は src="images/step2_design.jpg" を変更してください -->
+              <img src="images/step2_design.jpg" alt="コンピューター画面で被せ物を設計するイメージ">
+              <span class="step-image-caption">※イメージ（画面写真へ差替可）</span>
+            </div>
+            <div class="step-body">
+              <p class="step-desc">
+                撮影したデータをもとに、コンピューター上で被せ物を設計します。
+              </p>
+            </div>
+          </article>
+
+          <div class="step-arrow" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+              <path d="M12 5v14M12 19l-6-6M12 19l6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <!-- ステップ3 -->
+          <article class="step-card step-3">
+            <div class="step-top-band">
+              <span class="step-num" aria-hidden="true">STEP 3</span>
+              <h3 class="step-title">③ 削り出し</h3>
+            </div>
+            <div class="step-image-frame">
+              <!-- 【画像差し替え用スペース③】医院で撮影したミリングマシン写真に差し替える場合は src="images/step3_milling.jpg" を変更してください -->
+              <img src="images/step3_milling.jpg" alt="ミリングマシンで白いブロックから被せ物を削り出すイメージ">
+              <span class="step-image-caption">※イメージ（実機写真へ差替可）</span>
+            </div>
+            <div class="step-body">
+              <p class="step-desc">
+                院内のミリングマシン「CEREC Primemill」で、材料のブロックから被せ物を削り出します。
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="doctor-banner">
+          <div class="doctor-badge-circle" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#CF8D2E" stroke-width="2.2" stroke-linecap="round"/>
+              <circle cx="12" cy="7" r="4" stroke="#CF8D2E" stroke-width="2.2"/>
+            </svg>
+          </div>
+          <p class="doctor-banner-text">
+            <strong>院長：梅ヶ枝 裕子</strong>（歯科医師／歯科技工士の免許も持っています）
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 保険診療の白い被せ物（CAD/CAM冠） -->
+    <section class="section section-tinted" aria-labelledby="cadcam-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label label-mint">保険診療のご案内</span>
+          <h2 id="cadcam-heading" class="section-title">保険診療の白い被せ物（CAD/CAM冠）</h2>
+        </div>
+
+        <div class="cadcam-layout">
+          <div class="cadcam-photo-card">
+            <img src="images/consultation.jpg" alt="歯科医師が白い被せ物の模型を用いて丁寧に説明しているイメージ">
+            <p class="cadcam-photo-caption">お口の状態を確認し、診察のうえご説明いたします</p>
+          </div>
+
+          <ul class="feature-list">
+            <li class="feature-item">
+              <h3 class="feature-item-head">
+                <span class="feature-dot" aria-hidden="true"></span>
+                金属を使わない白い被せ物です
+              </h3>
+              <p class="feature-item-body">
+                金属を使わない白い被せ物で、健康保険で治療できる場合があります。<br>
+                健康保険で使えるかどうかは歯の場所などによるため、診察のうえご説明いたします。
+              </p>
+            </li>
+            <li class="feature-item">
+              <h3 class="feature-item-head">
+                <span class="feature-dot" aria-hidden="true"></span>
+                院内で設計・製作を行っています
+              </h3>
+              <p class="feature-item-body">
+                院内で設計・製作しているため、作り直しが必要になった場合も院内で対応できます。
+              </p>
+            </li>
+            <li class="feature-item">
+              <h3 class="feature-item-head">
+                <span class="feature-dot" aria-hidden="true"></span>
+                通院日の流れについて
+              </h3>
+              <p class="feature-item-body">
+                保険診療の場合、型取り（スキャン）の日と、被せ物を装着する日は別の日になります。
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. セラミック治療（自費診療）について -->
+    <section class="section section-white" aria-labelledby="ceramic-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label label-amber">自費診療に関するご案内</span>
+          <h2 id="ceramic-heading" class="section-title">セラミック治療（自費診療）について</h2>
+        </div>
+
+        <div class="status-panel">
+          <span class="status-badge">現在の対応状況と今後の予定</span>
+          <p>
+            セラミックのブロックを院内で削り出して、1日で被せ物を装着する治療（ワンデイトリートメント）は、<strong>現在は行っておりません</strong>。院長が技術を身につけたうえで、将来的に取り組みたいと考えています。
+          </p>
+          <p>
+            始める際は、費用・治療期間・リスクをこのページでお知らせします。
+          </p>
+        </div>
+
+        <h3 class="material-heading">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" fill="#FDF5E6" stroke="#CF8D2E" stroke-width="2"/>
+            <path d="M12 16v-4M12 8h.01" stroke="#CF8D2E" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+          【参考情報】材料の違いについて
+        </h3>
+
+        <div class="material-grid">
+          <div class="material-card material-ceramic">
+            <h4 class="material-card-head">
+              セラミック
+            </h4>
+            <p class="material-card-body">
+              すり減りにくく、水分を吸わないため汚れが付きにくい材料です。一方で、力のかかり方によっては欠ける（チッピング）ことがあります。
+            </p>
+          </div>
+
+          <div class="material-card material-cadcam">
+            <h4 class="material-card-head">
+              保険のCAD/CAM冠の材料
+              <span class="material-card-sub">（セラミックとプラスチック〈高分子材料〉を混ぜた材料）</span>
+            </h4>
+            <p class="material-card-body">
+              健康保険で使える材料です。性質はプラスチックの仲間に入ります。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. お問い合わせ・医院情報 -->
+    <section class="section section-cream" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label label-coral">ご相談・ご連絡</span>
+          <h2 id="contact-heading" class="section-title">お問い合わせ</h2>
+        </div>
+
+        <div class="contact-card">
+          <p class="contact-lead">
+            院内CAD/CAMシステムに関するご質問などは、下のボタンからお問い合わせフォームをご利用ください。
+          </p>
+
+          <a class="btn-form" href="https://forms.gle/Z5WQMww3upEPNXUz8" target="_blank" rel="noopener noreferrer">
+            <span>お問い合わせはこちら</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <span class="btn-form-note">※Googleフォームが新しいタブで開きます</span>
+
+          <div class="tel-guide-box">
+            <p class="tel-guide-message">
+              <span class="ib">ご予約・ご予約の変更、</span><span class="ib">お急ぎのご用件は</span><span class="ib">お電話でお願いいたします</span>
+            </p>
+            <a class="btn-tel" href="tel:0534756480" aria-label="うめがえ歯科医院に電話をかける 053-475-6480">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z" stroke="#204E64" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>053-475-6480</span>
+            </a>
+            <p class="tel-hours-note">診療時間はお電話でご確認ください</p>
+          </div>
+        </div>
+
+        <!-- 医院の基本情報と地図 -->
+        <div class="section-header" style="margin-top: 56px;">
+          <span class="section-label label-blue">アクセス・基本情報</span>
+          <h2 class="section-title">医院のご案内</h2>
+        </div>
+
+        <div class="clinic-info-grid">
+          <table class="info-table" aria-label="医院の基本情報">
+            <tbody>
+              <tr>
+                <th scope="row">医院名</th>
+                <td>うめがえ歯科医院</td>
+              </tr>
+              <tr>
+                <th scope="row">院長</th>
+                <td>梅ヶ枝 裕子<br><span style="font-size: 0.95rem; color: #526068;">（歯科技工士の免許も保有）</span></td>
+              </tr>
+              <tr>
+                <th scope="row">所在地</th>
+                <td>〒431-3123<br>静岡県浜松市中央区有玉西町2446</td>
+              </tr>
+              <tr>
+                <th scope="row">電話</th>
+                <td>
+                  <a class="info-tel-link" href="tel:0534756480">053-475-6480</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">診療時間</th>
+                <td>診療時間はお電話でご確認ください</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="map-wrapper">
+            <iframe
+              title="うめがえ歯科医院の周辺地図（Googleマップ）"
+              src="https://maps.google.com/maps?q=%E9%9D%99%E5%B2%A1%E7%9C%8C%E6%B5%9C%E6%9D%BE%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E6%9C%89%E7%8E%89%E8%A5%BF%E7%94%BA2446&t=m&z=16&output=embed&iwloc=near"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 6. フッター -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-clinic-name">うめがえ歯科医院</p>
+      <p class="footer-address">〒431-3123 静岡県浜松市中央区有玉西町2446</p>
+      <p class="footer-tel">電話：<a href="tel:0534756480">053-475-6480</a></p>
+      <p class="footer-copy">&copy; うめがえ歯科医院</p>
+    </div>
+  </footer>
+
+</body>
+</html>
